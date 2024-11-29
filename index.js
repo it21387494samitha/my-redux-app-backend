@@ -17,7 +17,7 @@ import UserModel from './Models/UserModel.js';
 dotenv.config(); 
 
 const app = express();
-
+const path = require('path');
 
 app.use(cors({
     origin: 'http://localhost:3000', 
@@ -75,9 +75,11 @@ connectDB()
         app.use('/api/feedback',feedbackRouter);
 
 
-     app.use(express.static("./frontend/build"));
-        app.get("*",(req, res)=>{
-            res.sendFile(path.resolve(_dirname, "frontend","build","index.html") )
+        app.use(express.static(path.join(__dirname, './frontend/build')));
+
+        // Catch-all route for React
+        app.get('*', (req, res) => {
+          res.sendFile(path.join(__dirname, './frontend/build', 'index.html'));
         });
 
 
