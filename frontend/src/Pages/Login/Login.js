@@ -15,7 +15,7 @@ function LoginPage() {
 
 
   const handleGoogleLogin = () => {
-    window.open('http://localhost:5000/auth/google', '_self');
+    window.open('https://newsltazure.azurewebsites.net/auth/google', '_self');
 
   };
 
