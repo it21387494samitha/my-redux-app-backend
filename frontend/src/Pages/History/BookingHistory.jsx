@@ -13,7 +13,7 @@ const BookingHistory = () => {
     const fetchBookingHistory = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/seats/history', {
+        const response = await axios.get('https://newsltazure.azurewebsites.net/api/seats/history', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBookings(response.data);
