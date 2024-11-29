@@ -16,7 +16,7 @@ const AdminSeatBooking = () => {
         const fetchSeats = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:5000/api/seats/seats', {
+                const response = await axios.get('https://newsltazure.azurewebsites.net/api/seats/seats', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
