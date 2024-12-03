@@ -15,7 +15,7 @@ function SeatAdd() {
     }
 
     axios.post(
-      'https://newsltazure.azurewebsites.net/api/seats', // Update with the correct rout
+      'https://sltseatreservation.azurewebsites.net/api/seats', // Update with the correct rout
       { row, number: parseInt(number, 10) },
       {
         headers: {

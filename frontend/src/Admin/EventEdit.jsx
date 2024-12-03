@@ -26,7 +26,7 @@ const EditEvent = () => {
     const fetchEventData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`https://newsltazure.azurewebsites.net/events/${eventId}`, {
+        const response = await axios.get(`https://sltseatreservation.azurewebsites.net/events/${eventId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

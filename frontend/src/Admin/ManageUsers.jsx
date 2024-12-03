@@ -20,7 +20,7 @@ function ManageUsers() {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://newsltazure.azurewebsites.net/users/all', {
+        const response = await fetch('https://sltseatreservation.azurewebsites.net/users/all', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

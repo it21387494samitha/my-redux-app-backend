@@ -17,7 +17,7 @@ const QRCodeDisplay = () => {
     const fetchEvents = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://newsltazure.azurewebsites.net/events/allad', {
+        const response = await axios.get('https://sltseatreservation.azurewebsites.net/events/allad', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

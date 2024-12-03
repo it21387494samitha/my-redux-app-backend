@@ -15,7 +15,7 @@ function LoginPage() {
 
 
   const handleGoogleLogin = () => {
-    window.open('https://newsltazure.azurewebsites.net/auth/google', '_self');
+    window.open('https://sltseatreservation.azurewebsites.net/auth/google', '_self');
 
   };
 
