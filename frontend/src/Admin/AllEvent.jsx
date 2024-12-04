@@ -10,7 +10,7 @@ function ManageEvents() {
  const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('https://sltseatreservation.azurewebsites.net/api/events/all')
+    axios.get('https://sltseatbooking1.azurewebsites.net/api/events/all')
       .then(response => {
         setEvents(response.data);
         setLoading(false);

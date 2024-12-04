@@ -30,7 +30,7 @@ const Header = ({ toggleSidebar, isOpen, isDarkMode, toggleTheme }) => {
 
   const handleProfileClick = () => {
     // Navigate to profile page or show a dropdown menu
-    navigate('https://newsltazure.azurewebsites.net/profile');
+    navigate('https://sltseatbooking1.azurewebsites.net/profile');
   };
 
   return (

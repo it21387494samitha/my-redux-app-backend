@@ -13,7 +13,7 @@ function AdminDash() {
     const fetchDashboardData = async () => {
       try {
         // Fetch Events
-        const eventsResponse = await fetch('http://localhost:5000/events/count');
+        const eventsResponse = await fetch('https://sltseatbooking1.azurewebsites.net/events/count');
         if (!eventsResponse.ok) throw new Error(`HTTP error! Status: ${eventsResponse.status}`);
         const eventsData = await eventsResponse.json();
         if (Array.isArray(eventsData)) {
@@ -21,7 +21,7 @@ function AdminDash() {
         }
 
         // Fetch Users
-        const usersResponse = await fetch('http://localhost:5000/users/all');
+        const usersResponse = await fetch('https://sltseatbooking1.azurewebsites.net/users/all');
         if (!usersResponse.ok) throw new Error(`HTTP error! Status: ${usersResponse.status}`);
         const usersData = await usersResponse.json();
         if (Array.isArray(usersData)) {
@@ -29,7 +29,7 @@ function AdminDash() {
         }
 
         // Fetch Bookings
-        const bookingsResponse = await fetch('http://localhost:5000/api/seats/event/yourEventId/booked-seats-count');
+        const bookingsResponse = await fetch('https://sltseatbooking1.azurewebsites.net/api/seats/event/yourEventId/booked-seats-count');
         if (!bookingsResponse.ok) throw new Error(`HTTP error! Status: ${bookingsResponse.status}`);
         const bookingsData = await bookingsResponse.json();
         if (Array.isArray(bookingsData)) {

@@ -17,7 +17,7 @@ function LoginPage() {
 
 
   const handleGoogleLogin = () => {
-    window.open('https://newsltazure.azurewebsites.net/auth/google', '_self');
+    window.open('hhttps://sltseatbooking1.azurewebsites.net/auth/google', '_self');
 
   };
 
@@ -26,7 +26,7 @@ function LoginPage() {
     setErrorMessage('');
 
     try {
-      const response = await axios.post('https://newsltazure.azurewebsites.net/users/login', {
+      const response = await axios.post('https://sltseatbooking1.azurewebsites.net/users/login', {
         email,
         password,
       });

@@ -13,7 +13,7 @@ const BookingHistory = () => {
     const fetchBookingHistory = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://sltseatreservation.azurewebsites.net/api/seats/history', {
+        const response = await axios.get('https://sltseatbooking1.azurewebsites.net/api/seats/history', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBookings(response.data);
@@ -33,7 +33,7 @@ const BookingHistory = () => {
     if (confirmed) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`https://sltseatreservation.azurewebsites.net/api/seats/history/${id}`, {
+        await axios.delete(`https://sltseatbooking1.azurewebsites.net/api/seats/history/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         // Filter out the deleted booking from state
