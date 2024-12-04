@@ -15,7 +15,7 @@ function LoginPage() {
 
 
   const handleGoogleLogin = () => {
-    window.open('https://sltseatreservation.azurewebsites.net/auth/google', '_self');
+    window.open('https://sltseatbooking1.azurewebsites.net/auth/google', '_self');
 
   };
 
